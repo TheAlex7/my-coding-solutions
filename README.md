@@ -1,2 +1,4 @@
-# my-coding-solutions
-My personal solutions to LeetCode style questions. Will occasionally try to solve in languages other than python but will for the most part be in python3.
+# Coding Challenge Solutions
+My personal solutions to LeetCode style questions. Including my thought processes and algorithm analysis.
+
+Will primarily be in python3.
