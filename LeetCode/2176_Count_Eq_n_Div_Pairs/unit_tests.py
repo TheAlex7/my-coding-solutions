@@ -1,7 +1,6 @@
 from Solution import Solution
 
 if __name__ == "__main__":
-    sol = Solution()
     input_path = "cases.txt"
 
     with open(input_path, "r") as infile:
@@ -11,7 +10,7 @@ if __name__ == "__main__":
         nums = [int(num) for num in nums.split(",")]
         k = int(k)
 
-        ans = sol.countPairs(nums,k)
+        ans = Solution().countPairs(nums,k)
         if str(ans) == expected:
             passed = "PASSED"
         else:
