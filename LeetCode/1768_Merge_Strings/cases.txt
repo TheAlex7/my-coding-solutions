@@ -1,1 +1,4 @@
 # Enter Test Cases Here. hashtag delimiter. Line 1 is ignored. format: inputs#expected
+abc#pqr#apbqcr
+ab#pqrs#apbqrs
+abcd#pq#apbqcd

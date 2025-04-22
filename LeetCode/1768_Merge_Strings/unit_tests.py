@@ -7,11 +7,11 @@ if __name__ == "__main__":
 		# load inputs while omitting first line in test case file
 		inputs = [line.strip() for line in infile.readlines()][1:]
 
-	for i, (inputs,expected_output) in enumerate([tup.split("#") for tup in inputs]):
+	for i, (w1,w2,expected_output) in enumerate([tup.split("#") for tup in inputs]):
 		# process inputs further if necessary
 
 		# rename func() to appropriate function name, if needed
-		ans = Solution().func(inputs)
+		ans = Solution().mergeAlternately(w1,w2)
 		if str(ans) == expected_output:
 			passed = "PASSED"
 		else:
