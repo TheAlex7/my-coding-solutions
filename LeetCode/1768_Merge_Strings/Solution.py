@@ -19,7 +19,7 @@ class Solution:
 		if j < len(word2): # 2nd word was longer
 			result.append(word2[j:])
 
-		return "".join(result) # string uilder to avoid creating intermediate strings that weigh on memory
+		return "".join(result) # string builder to avoid creating intermediate strings that weigh on memory
 	
 """
 Approach: 2 Pointers
