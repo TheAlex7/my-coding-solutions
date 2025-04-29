@@ -1,5 +1,6 @@
 # Automation Script to make new boiler plate folders with common format of LeetCode env challenges
 import sys
+import os
 
 if __name__ == "__main__":
     args = sys.argv[1:] # retrieve command args that aren't the script 
@@ -8,6 +9,7 @@ if __name__ == "__main__":
         sys.exit()
 
     name_of_challenge = args[0]
+    os.makedirs(name_of_challenge, exist_ok=True) # create folder if doesn't exist
     with open(f"./{name_of_challenge}/cases.txt", "w") as file:
         file.write("# Enter Test Cases Here. hashtag delimiter. Line 1 is ignored. format: inputs#expected\n")
 
