@@ -3,12 +3,12 @@ import sys
 import os
 
 if __name__ == "__main__":
-    args = sys.argv[1:] # retrieve command args that aren't the script 
+    args = sys.argv[0:] # retrieve command args that aren't the script 
     if len(args) != 1:
-        print("Invalid input. Provide name of Coding challenge only. Delimited with \"_\"")
+        print("Invalid input.")
         sys.exit()
 
-    name_of_challenge = args[0]
+    name_of_challenge = input("Provide name of Coding challenge Delimited with \"_\": ")
     os.makedirs(name_of_challenge, exist_ok=True) # create folder if doesn't exist
     with open(f"./{name_of_challenge}/cases.txt", "w") as file:
         file.write("# Enter Test Cases Here. hashtag delimiter. Line 1 is ignored. format: inputs#expected\n")
