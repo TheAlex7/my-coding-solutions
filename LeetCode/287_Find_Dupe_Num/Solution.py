@@ -6,3 +6,13 @@ class Solution:
             for j in range(i+1, len(nums)):
                 if nums[i] == nums[j]:
                     return nums[i]
+                
+
+"""
+Approach: Brute Force
+
+Manually check every pair of values in array using only constant space.
+
+Time: O(n^2)
+Space: O(1)
+"""
