@@ -1,25 +1,19 @@
-import bisect
 class Solution:
 
     def __init__(self):
         self.tm = dict()
-        self.prev_times_mp = dict() # finds existing keys
 
     def set(self, key: str, value: str, timestamp: int) -> None:
         if key in self.tm:
             self.tm[key][timestamp] = value
-            bisect.insort(self.prev_times_mp[key], timestamp)
         else:
             self.tm[key] = {timestamp:value}
-            self.prev_times_mp[key] = [timestamp]
-        
 
     def get(self, key: str, timestamp: int) -> str:
         value = ""
         if key not in self.tm:
             return ""
-        for i in range(len(self.prev_times_mp[key])-1,-1,-1):
-            time = self.prev_times_mp[key][i]
+        for time in reversed(self.tm[key].keys()):
             if time <= timestamp:
                 value = self.tm[key][time]
                 break
